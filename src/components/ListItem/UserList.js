@@ -7,7 +7,7 @@ export default function UserList() {
         <div className='container'>
             <div className='row'>
                 {users.map(user => {
-                    return <UserCard user={user} />
+                    return <UserCard user={user} key={user.id} />
                 })}
             </div>
         </div>

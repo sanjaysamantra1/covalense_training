@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function UserCard({ user }) {
     let { id, username, name, email, phone, address } = user;
@@ -11,7 +12,7 @@ export default function UserCard({ user }) {
                 <p className="card-text">{phone}</p>
                 <p className="card-text">{email}</p>
                 <p className="card-text">{address.city}</p>
-                <a href="#" className="btn btn-primary">View Details</a>
+                <Link to={`/userdetails/${id}`}> View Details</Link>
             </div>
         </div>
     </div>
